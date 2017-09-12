@@ -162,7 +162,7 @@ function eatThemUp(){
 		cubeGood.y = Math.random() * (HEIGHT - 50);
 	}
 	setInterval(function(){
-        if(!collisIS && tryagain){
+        if(!collisIS){
             game()
         }
         else if(tryAgain){
