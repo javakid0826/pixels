@@ -136,7 +136,7 @@ function eatThemUp(){
             return true;
         }
     }
-	cube1.y = Math.random() * (height - 10);
+	cube1.y = Math.random() * (HEIGHT - 10);
         var cdx = cube.x - cube1.x,
 	cdy = cube.y - cube1.y,
 	cd = Math.sqrt(cdy*cdy + cdx*cdx),
