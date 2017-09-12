@@ -103,8 +103,8 @@ function eatThemUp(){
 	}
 	function render(){
 		context.fillStyle = 'rgba(00,225,00,0.3)';
-		context.fillRect(0, 0, width, height);
-		//context.clearRect(0, 0, width, height)
+		context.fillRect(0, 0, WIDTH, HEIGHT);
+		//context.clearRect(0, 0, WIDTH, HEIGHT)
 		context.fillStyle = "red";
 		context.fillRect(player.x, player.y, player.width, player.height);
 		context.fillStyle = "blue";
