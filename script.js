@@ -6,7 +6,7 @@ function eatThemUp(){
     var scoreArray=[], timeArray=[], time=0, bestTime=0, tries;
     var highScore=0, lastScore;
     var collisIS;
-    var enemySpeed = 3.333, speed = 10;
+    var enemySpeed = 3.333, speed = 15;
 	var canvas = document.getElementById("mainCanvas");
 	var context = canvas.getContext("2d");
 	var keys = [];
