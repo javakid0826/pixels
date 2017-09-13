@@ -62,8 +62,8 @@ function eatThemUp(){
 		if(keys[39] || keys[68]) player.x+=speed;
 		if(player.x < 0) player.x = 0;
 		if(player.y < 0) player.y = 0;
-		if(player.x >= WIDTH-player.x) player.x = 480;
-		if(player.y >= HEIGHT-player.y) player.y = 380;
+		if(player.x >= WIDTH-player.width) player.x = 480;
+		if(player.y >= HEIGHT-player.height) player.y = 380;
 		var dx = player.x - cube.x,
 			dy = player.y - cube.y;
 		cube.vx+= dx / 60;
@@ -78,12 +78,12 @@ function eatThemUp(){
 		cube1.x+= cube1.vx;
 		if(cube.x < 0) cube.vx = -Math.abs(cube.vx) / 5;
 		if(cube.y < 0) cube.vy = -Math.abs(cube.vy) / 5;
-		if(cube.x >= WIDTH-cube.x) cube.vx = -Math.abs(cube.vx) / 5;
-		if(cube.y >= HEIGHT-cube.y) cube.vy = -Math.abs(cube.vy) / 5;
+		if(cube.x >= WIDTH-cube.width) cube.vx = -Math.abs(cube.vx) / 5;
+		if(cube.y >= HEIGHT-cube.height) cube.vy = -Math.abs(cube.vy) / 5;
 		if(cube1.x < 0) cube1.vx = -Math.abs(cube1.vx) / 5;
 		if(cube1.y < 0) cube1.vy = -Math.abs(cube1.vy) / 5;
-		if(cube1.x >= WIDTH-cube.x) cube1.vx = -Math.abs(cube1.vx) / 5;
-		if(cube1.y >= HEIGHT-cube.y) cube1.vy = -Math.abs(cube1.vy) / 5;
+		if(cube1.x >= WIDTH-cube.width) cube1.vx = -Math.abs(cube1.vx) / 5;
+		if(cube1.y >= HEIGHT-cube.height) cube1.vy = -Math.abs(cube1.vy) / 5;
         collis(player, cube);
         collis(player, cube1);
         if(score>highScore)highScore=score;
