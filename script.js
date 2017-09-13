@@ -10,12 +10,12 @@ function eatThemUp(){
 	var canvas = document.getElementById("mainCanvas");
 	var context = canvas.getContext("2d");
 	var keys = [];
-	var WIDTH = 500, HEIGHT = 400;
+	var WIDTH = 700, HEIGHT = 700;
 	var player = {
 		width: 20,
 		height: 20,
-		x: (500 - 20) /2,
-		y: (400 - 20) /2
+		x: (WIDTH - 20) /2,
+		y: (HEIGHT - 20) /2
 	}
 	var repul = 1;
 	var gravity = 0.1;
@@ -66,14 +66,14 @@ function eatThemUp(){
 		if(player.y >= HEIGHT-player.height) player.y = 380;
 		var dx = player.x - cube.x,
 			dy = player.y - cube.y;
-		cube.vx+= dx / 60;
-		cube.vy+= dy / 60;
+		cube.vx+= dx / 40;
+		cube.vy+= dy / 41;
 		cube.y+= cube.vy;
 		cube.x+= cube.vx;
 		var dx1 = player.x - cube1.x,
 			dy1 = player.y - cube1.y;
-		cube1.vx+= dx1 / 60;
-		cube1.vy+= dy1 / 60;
+		cube1.vx+= dx1 / 41;
+		cube1.vy+= dy1 / 40;
 		cube1.y+= cube1.vy;
 		cube1.x+= cube1.vx;
 		if(cube.x < 0) cube.vx = -Math.abs(cube.vx) / 5;
