@@ -2,15 +2,17 @@ var tryAgain=false;
 function tryagain(){
         tryAgain=true;
 }
-function eatThemUp(){
+function eatThemUp(){ 
     var scoreArray=[], timeArray=[], time=0, bestTime=0, tries;
     var highScore=0, lastScore;
     var collisIS;
     var enemySpeed = 3.333, speed = 15;
 	var canvas = document.getElementById("mainCanvas");
+	canvas.width=WIDTH;
+	canvas.height=HEIGHT;
 	var context = canvas.getContext("2d");
 	var keys = [];
-	var WIDTH = 700, HEIGHT = 700;
+	var WIDTH = document.getElementById("width"), HEIGHT = document.getElementById("height");
 	var player = {
 		width: 20,
 		height: 20,
@@ -66,14 +68,14 @@ function eatThemUp(){
 		if(player.y >= HEIGHT-player.height) player.y = 380;
 		var dx = player.x - cube.x,
 			dy = player.y - cube.y;
-		cube.vx+= dx / 40;
-		cube.vy+= dy / 41;
+		cube.vx+= dx / 30;
+		cube.vy+= dy / 60;
 		cube.y+= cube.vy;
 		cube.x+= cube.vx;
 		var dx1 = player.x - cube1.x,
 			dy1 = player.y - cube1.y;
-		cube1.vx+= dx1 / 41;
-		cube1.vy+= dy1 / 40;
+		cube1.vx+= dx1 / 60;
+		cube1.vy+= dy1 / 30;
 		cube1.y+= cube1.vy;
 		cube1.x+= cube1.vx;
 		if(cube.x < 0) cube.vx = -Math.abs(cube.vx) / 5;
