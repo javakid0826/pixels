@@ -1,18 +1,20 @@
+//document.getElementById("width")
+//document.getElementById("height")
 var tryAgain=false;
 function tryagain(){
         tryAgain=true;
 }
 function eatThemUp(){ 
-    var scoreArray=[], timeArray=[], time=0, bestTime=0, tries;
-    var highScore=0, lastScore;
-    var collisIS;
-    var enemySpeed = 3.333, speed = 15;
+	var scoreArray=[], timeArray=[], time=0, bestTime=0, tries;
+	var highScore=0, lastScore;
+	var collisIS;
+	var enemySpeed = 3.333, speed = 15;
 	var canvas = document.getElementById("mainCanvas");
 	canvas.width=WIDTH;
 	canvas.height=HEIGHT;
 	var context = canvas.getContext("2d");
 	var keys = [];
-	var WIDTH = document.getElementById("width"), HEIGHT = document.getElementById("height");
+	var WIDTH = 800, HEIGHT = 800;
 	var player = {
 		width: 20,
 		height: 20,
@@ -21,7 +23,7 @@ function eatThemUp(){
 	}
 	var repul = 1;
 	var gravity = 0.1;
-    var dampening = 2;
+	var dampening = 2;
 	var cube = {
 		x: 20,
 		y: 20,
