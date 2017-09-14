@@ -10,8 +10,8 @@ function eatThemUp(){
 	var collisIS;
 	var enemySpeed = 3.333, speed = 15;
 	var canvas = document.getElementById("mainCanvas");
-	canvas.width=WIDTH;
-	canvas.height=HEIGHT;
+	//canvas.width=WIDTH;
+	//canvas.height=HEIGHT;
 	var context = canvas.getContext("2d");
 	var keys = [];
 	var WIDTH = 800, HEIGHT = 800;
