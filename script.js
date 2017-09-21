@@ -14,7 +14,7 @@ function eatThemUp(){
 	//canvas.height=HEIGHT;
 	var context = canvas.getContext("2d");
 	var keys = [];
-	var WIDTH = 800, HEIGHT = 800;
+	var WIDTH = 700, HEIGHT = 700;
 	var player = {
 		width: 20,
 		height: 20,
@@ -66,8 +66,8 @@ function eatThemUp(){
 		if(keys[39] || keys[68]) player.x+=speed;
 		if(player.x < 0) player.x = 0;
 		if(player.y < 0) player.y = 0;
-		if(player.x >= WIDTH-player.width) player.x = 480;
-		if(player.y >= HEIGHT-player.height) player.y = 380;
+		if(player.x >= WIDTH-player.width) player.x = HEIGHT-player.x;
+		if(player.y >= HEIGHT-player.height) player.y = WIDTH-player.y;
 		var dx = player.x - cube.x,
 			dy = player.y - cube.y;
 		cube.vx+= dx / 30;
